@@ -7,9 +7,36 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_pack_tag 'application' %>
+
+    <% self_css_path = "/assets/"+controller.controller_name  %>
+    <%= stylesheet_link_tag self_css_path, :media => "all" %>
+
+    <%= stylesheet_link_tag 'layouts/application', media: 'all' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="l-app">
+      <div class="l-app-left-pane">
+        <div class="l-app-left-pane-user">
+          <i class="fas fa-user"></i>
+          <p>
+            Janie
+          </p>
+        </div>
+        <div class="l-app-left-pane-links">
+          <i class="fas fa-home"></i>
+          <i class="fas fa-users is-active"></i>
+          <i class="fas fa-chart-line"></i>
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <div class="l-app-left-pane-settings">
+          <i class="fas fa-wrench"></i>
+          <i class="fas fa-power-off"></i>
+        </div>
+      </div>
+      <div class="l-app-container">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
