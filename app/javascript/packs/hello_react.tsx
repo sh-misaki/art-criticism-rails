@@ -2,12 +2,18 @@
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import * as PropTypes from 'prop-types'
+
+import {
+  Typography
+} from "@material-ui/core";
 
 const Hello = props => (
-  <div>Hello {props.name}ooooooo!</div>
+  <Typography>
+    Hello {props.name}ooooooo!
+  </Typography>
 )
 
 Hello.defaultProps = {
