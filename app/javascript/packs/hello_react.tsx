@@ -5,6 +5,7 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import * as PropTypes from 'prop-types'
+import injectSheet from 'react-jss';
 
 import { MuiThemeProvider } from "@material-ui/core";
 import theme from "../assets/theme";
@@ -13,11 +14,19 @@ import {
   Typography
 } from "@material-ui/core";
 
-const Hello = props => (
-  <Typography>
-    Hello {props.name}ooooooo!
+const styles = {
+  hello: {
+    color: 'green',
+  }
+}
+
+const Hello = ({ name, classes }) => (
+  <Typography classes={{ root: classes.hello }}>
+    Hello {name}!
   </Typography>
 )
+
+const StyledHello = injectSheet(styles)(Hello)
 
 Hello.defaultProps = {
   name: 'David'
@@ -31,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded')
   ReactDOM.render(
     <MuiThemeProvider theme={theme} >
-      <Hello name="React" />
+      <StyledHello name="React" />
     </MuiThemeProvider>,
     document.getElementById('helloReact')
   )
