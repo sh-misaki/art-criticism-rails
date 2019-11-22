@@ -14,3 +14,18 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { MuiThemeProvider } from "@material-ui/core";
+import theme from "../assets/theme";
+import * as React from "react";
+import * as ReactDOM from 'react-dom';
+
+import HomePage from "./pages/Home";
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render((
+    <MuiThemeProvider theme={theme}>
+      <HomePage name="React" />
+    </MuiThemeProvider>
+  ), document.getElementById('helloReact'))
+})
