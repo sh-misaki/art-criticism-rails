@@ -6,6 +6,9 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import * as PropTypes from 'prop-types'
 
+import { MuiThemeProvider } from "@material-ui/core";
+import theme from "../assets/theme";
+
 import {
   Typography
 } from "@material-ui/core";
@@ -27,7 +30,9 @@ Hello.propTypes = {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded')
   ReactDOM.render(
-    <Hello name="React" />,
+    <MuiThemeProvider theme={theme} >
+      <Hello name="React" />
+    </MuiThemeProvider>,
     document.getElementById('helloReact')
   )
 })
