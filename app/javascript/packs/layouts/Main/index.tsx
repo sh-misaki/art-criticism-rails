@@ -1,14 +1,22 @@
-import React, { FunctionComponent, useCallback, useState, useEffect } from "react";
+import React, { FunctionComponent } from "react";
+import injectSheet from 'react-jss';
 
-const MainLayout: FunctionComponent = ({
+import SidePane from "../../organisms/SidePane";
+
+import styles, { IStyleProps } from "./styles";
+
+const MainLayout: FunctionComponent<IStyleProps> = ({
+  classes,
   children,
 }) => {
   return (
-    <div>
-      hoge
-      {children}
+    <div className={classes.LayoutMain}>
+      <SidePane className={classes.LaytoutSidePane} />
+      <div className={classes.LayoutContainer}>
+        {children}
+      </div>
     </div>
   )
 }
 
-export default MainLayout;
+export default injectSheet(styles)(MainLayout);
