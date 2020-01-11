@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2019_12_18_140902) do
     t.integer "beginYear"
     t.integer "endYear"
     t.string "role"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
   end
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 2019_12_18_140902) do
     t.string "classification"
     t.string "year"
     t.bigint "artist_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["artist_id"], name: "index_works_on_artist_id"
   end
 

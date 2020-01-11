@@ -9,7 +9,8 @@ class CreateWorks < ActiveRecord::Migration[6.0]
       t.string :year
       t.references :artist, null: false, foreign_key: true
 
-      t.timestamps
+      t.column :created_at, 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP'
+      t.column :updated_at, 'DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'
     end
   end
 end
