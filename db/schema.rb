@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_18_140902) do
+ActiveRecord::Schema.define(version: 2020_01_12_053007) do
 
   create_table "artists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -29,11 +29,9 @@ ActiveRecord::Schema.define(version: 2019_12_18_140902) do
     t.string "department"
     t.string "classification"
     t.string "year"
-    t.bigint "artist_id", null: false
+    t.bigint "artist_id"
     t.datetime "created_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
-    t.index ["artist_id"], name: "index_works_on_artist_id"
   end
 
-  add_foreign_key "works", "artists"
 end
