@@ -1,1 +1,9 @@
-<div id="helloReact"></div>
+<% @works.each do |work| %>
+  <%= work.name %>
+<% end %>
+
+<%= content_tag :div,
+  id: "worksIndex",
+  data: @works.to_json do
+%>
+<% end %>

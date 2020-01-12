@@ -9,50 +9,19 @@ import MainLayout from "../../layouts/Main";
 import styles, { IStyleProps } from "./styles";
 
 interface IOwnProps {
-  name: string;
+  objects: any[];
 }
 
 type IProps = IOwnProps & IStyleProps;
 
-interface IState {
-  objects: any[];
-}
-
-class Hello extends React.Component<IProps, IState> {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      objects: [],
-    };
-  }
-
-  public async componentDidMount() {
-    const { data: { objectIDs } } = await axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search', {
-      params: {
-        departmentId: 21,
-        q: "a",
-      }
-    })
-
-    const datas = await Promise.all(objectIDs.slice(0, 30).map(async objectID => {
-      const { data } = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`);
-      return data;
-    }))
-
-    this.setState({
-      objects: datas,
-    });
-  }
-
+class Hello extends React.Component<IProps> {
   public render() {
     const {
-      name,
+      objects,
       classes,
     } = this.props;
-    const { objects } = this.state;
 
-    console.log(objects)
+    console.log(objects);
 
     return (
       <MainLayout>
@@ -65,10 +34,10 @@ class Hello extends React.Component<IProps, IState> {
               />
               <div className={classes.objectOverview}>
                 <Typography classes={{root: classes.objectTitle}}>
-                  { object.title }
+                  { object.name }
                 </Typography>
                 <Typography classes={{root: classes.objectArtist}}>
-                  { object.artistDisplayName } ({ object.artistBeginDate } ~ { object.artistEndDate })
+                  { object.artist_name }
                 </Typography>
               </div>
             </div>

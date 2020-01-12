@@ -23,9 +23,10 @@ import * as ReactDOM from 'react-dom';
 import HomePage from "./pages/Home";
 
 document.addEventListener('DOMContentLoaded', () => {
+  const data = JSON.parse(document.getElementById("worksIndex").getAttribute("data"));
   ReactDOM.render((
     <MuiThemeProvider theme={theme}>
-      <HomePage name="React" />
+      <HomePage objects={data} />
     </MuiThemeProvider>
-  ), document.getElementById('helloReact'))
+  ), document.getElementById('worksIndex'))
 })
