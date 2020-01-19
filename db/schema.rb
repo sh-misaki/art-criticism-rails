@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_01_12_073155) do
     t.datetime "updated_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.string "artist_name"
     t.string "source"
-    t.string "sourceId"
+    t.string "source_id"
   end
 
 end
