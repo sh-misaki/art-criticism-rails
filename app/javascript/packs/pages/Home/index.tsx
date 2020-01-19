@@ -1,40 +1,38 @@
 import * as React from 'react'
-import injectSheet, { WithStyles } from 'react-jss';
 import {
   Typography
 } from "@material-ui/core";
 import axios from "axios";
 
 import MainLayout from "../../layouts/Main";
-import styles, { IStyleProps } from "./styles";
+import styles from "./styles.css";
 
 interface IOwnProps {
   objects: any[];
 }
 
-type IProps = IOwnProps & IStyleProps;
+type IProps = IOwnProps;
 
 class Hello extends React.Component<IProps> {
   public render() {
     const {
       objects,
-      classes,
     } = this.props;
 
     return (
       <MainLayout>
-        <div className={classes.objectWrapper}>
+        <div className={styles.objectWrapper}>
           {objects.map(object => (
-            <div className={classes.object}>
+            <div className={styles.object}>
               <img
-                className={classes.objectImage}
+                className={styles.objectImage}
                 src={`/images/${object.source_id}-small.jpg`}
               />
-              <div className={classes.objectOverview}>
-                <Typography classes={{root: classes.objectTitle}}>
+              <div className={styles.objectOverview}>
+                <Typography classes={{root: styles.objectTitle}}>
                   { object.name }
                 </Typography>
-                <Typography classes={{root: classes.objectArtist}}>
+                <Typography classes={{root: styles.objectArtist}}>
                   { object.artist_name }
                 </Typography>
               </div>
@@ -46,4 +44,4 @@ class Hello extends React.Component<IProps> {
   }
 }
 
-export default injectSheet(styles)(Hello);
+export default Hello;

@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react'
-import injectSheet from 'react-jss';
 import classNames from "classnames";
 import {
   Typography
@@ -15,36 +14,35 @@ import {
   PowerSettingsNew as PowerSettingsNewIcon
 } from '@material-ui/icons';
 
-import styles, { IStyleProps } from "./styles";
+import styles from "./styles.css";
 
 interface IOwnProps {
   className?: string;
 }
 
-type IProps = IOwnProps & IStyleProps;
+type IProps = IOwnProps;
 
 const SidePane: FunctionComponent<IProps> = ({
-  classes,
   className,
 }) => (
-  <div className={classNames(classes.SidePane, className)}>
-    <div className={classNames(classes.SidePaneItems)}>
+  <div className={classNames(styles.SidePane, className)}>
+    <div className={classNames(styles.SidePaneItems)}>
       <PersonIcon />
       <Typography>
         Janie
       </Typography>
     </div>
-    <div className={classNames(classes.SidePaneItems)}>
+    <div className={classNames(styles.SidePaneItems)}>
       <HomeIcon />
       <PeopleIcon />
       <TimelineIcon />
       <PieChartIcon />
     </div>
-    <div className={classNames(classes.SidePaneItems)}>
+    <div className={classNames(styles.SidePaneItems)}>
       <BuildIcon />
       <PowerSettingsNewIcon />
     </div>
   </div>
 )
 
-export default injectSheet(styles)(SidePane);
+export default SidePane;
