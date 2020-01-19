@@ -28,7 +28,7 @@ class Hello extends React.Component<IProps> {
             <div className={classes.object}>
               <img
                 className={classes.objectImage}
-                src={`/images/${object.source_id}-small.jpg`}
+                src={`assets/images/${object.source_id}-small.jpg`}
               />
               <div className={classes.objectOverview}>
                 <Typography classes={{root: classes.objectTitle}}>
