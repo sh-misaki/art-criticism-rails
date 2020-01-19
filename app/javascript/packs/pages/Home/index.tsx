@@ -21,8 +21,6 @@ class Hello extends React.Component<IProps> {
       classes,
     } = this.props;
 
-    console.log(objects);
-
     return (
       <MainLayout>
         <div className={classes.objectWrapper}>
