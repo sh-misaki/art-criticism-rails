@@ -1,52 +1,30 @@
 .objectWrapper {
   display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  height: 5000px;
-}
-
-.objectWrapper:before {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
-  order: 2;
-}
-
-.objectWrapper:after {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
-  order: 2;
+  flex-wrap: wrap;
 }
 
 .object {
-  width: 31%;
-  padding: 16px;
-  box-shadow: 8px 8px 16px rgba(0,0,0,0.25);
-  border-radius: 4px;
-  margin-bottom: 48px;
-}
-.object:nth-child(3n+1) {
-  order: 1;
-}
-.object:nth-child(3n+2) {
-  order: 2;
-}
-.object:nth-child(3n) {
-  order: 3;
+  display: flex;
+  width: 100%;
+  margin-bottom: 44px;
 }
 
+.objectImageWrapper {
+  flex: 1;
+}
 .objectImage {
   width: 100%;
 }
+
 .objectOverview {
-  margin-top: 16px;
+  flex: 1;
+  padding: 8px 32px;
 }
-.objectTitle {
-  font-size: 15px;
+.objectTitle.objectTitle {
+  font-size: 28px;
+  font-weight: bold;
 }
-objectArtist {
+.objectArtist.objectArtist {
   font-size: 13px;
   text-align: right;
-  margin-top: 8px;
 }

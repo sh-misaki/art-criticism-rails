@@ -24,10 +24,12 @@ class Hello extends React.Component<IProps> {
         <div className={styles.objectWrapper}>
           {objects.map(object => (
             <div className={styles.object}>
-              <img
-                className={styles.objectImage}
-                src={`/images/${object.source_id}-small.jpg`}
-              />
+              <div className={styles.objectImageWrapper}>
+                <img
+                  className={styles.objectImage}
+                  src={`/images/${object.source_id}-small.jpg`}
+                />
+              </div>
               <div className={styles.objectOverview}>
                 <Typography classes={{root: styles.objectTitle}}>
                   { object.name }
