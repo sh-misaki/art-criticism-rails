@@ -1,10 +1,11 @@
-.LayoutMain {
+.LayoutContainer {
   display: flex;
   width: 100vw;
   height: 100vh;
+  padding-top: 72px;
 }
 
-.LayoutContainer {
+.LayoutChildren {
   background-color: #f6f6fc;
   flex-grow: 1;
   align-items: center;
