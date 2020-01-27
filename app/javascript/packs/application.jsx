@@ -21,12 +21,24 @@ import * as React from "react";
 import * as ReactDOM from 'react-dom';
 
 import HomePage from "./pages/Home";
+import WorksShow from "./pages/WorksShow";
 
 document.addEventListener('DOMContentLoaded', () => {
-  const data = JSON.parse(document.getElementById("worksIndex").getAttribute("data"));
-  ReactDOM.render((
-    <MuiThemeProvider theme={theme}>
-      <HomePage objects={data} />
-    </MuiThemeProvider>
-  ), document.getElementById('worksIndex'))
+  if (document.getElementById("worksIndex") !== null) {
+    const data = JSON.parse(document.getElementById("worksIndex").getAttribute("data"));
+    ReactDOM.render((
+      <MuiThemeProvider theme={theme}>
+        <HomePage objects={data} />
+      </MuiThemeProvider>
+    ), document.getElementById('worksIndex'))
+  }
+
+  if (document.getElementById("worksShow") !== null) {
+    const worksShowData = JSON.parse(document.getElementById("worksShow").getAttribute("data"));
+    ReactDOM.render((
+      <MuiThemeProvider theme={theme}>
+        <WorksShow work={worksShowData} />
+      </MuiThemeProvider>
+    ), document.getElementById('worksShow'))
+  }
 })

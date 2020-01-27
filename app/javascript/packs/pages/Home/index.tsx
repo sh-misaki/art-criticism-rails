@@ -21,7 +21,10 @@ class Hello extends React.Component<IProps> {
       <MainLayout>
         <div className={styles.objectWrapper}>
           {objects.map(object => (
-            <div className={styles.object}>
+            <a
+              className={styles.object}
+              href={`/works/${object.id}`}
+            >
               <div className={styles.objectImageWrapper}>
                 <img
                   className={styles.objectImage}
@@ -36,7 +39,7 @@ class Hello extends React.Component<IProps> {
                   { object.artist_name } / { object.year }
                 </Typography>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </MainLayout>
