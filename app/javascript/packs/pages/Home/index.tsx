@@ -1,9 +1,7 @@
-import * as React from 'react'
-import {
-  Typography
-} from "@material-ui/core";
-import axios from "axios";
+import * as React from 'react';
+import classNames from "classnames";
 
+import Typography from "../../atoms/Typography";
 import MainLayout from "../../layouts/Main";
 import styles from "./styles.css";
 
@@ -31,11 +29,11 @@ class Hello extends React.Component<IProps> {
                 />
               </div>
               <div className={styles.objectOverview}>
-                <Typography classes={{root: styles.objectTitle}}>
+                <Typography className={styles.objectOverviewTitle}>
                   { object.name }
                 </Typography>
-                <Typography classes={{root: styles.objectArtist}}>
-                  { object.artist_name }
+                <Typography className={styles.objectOverviewItem}>
+                  { object.artist_name } / { object.year }
                 </Typography>
               </div>
             </div>
