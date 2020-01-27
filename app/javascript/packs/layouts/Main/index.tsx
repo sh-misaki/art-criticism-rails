@@ -12,11 +12,14 @@ const MainLayout: FunctionComponent = ({
     <div className={styles.LayoutMain}>
       <Header className={styles.LayoutHeader}/>
       <div className={styles.LayoutContainer}>
-        <SidePane />
-        <div className={styles.LayoutChildren}>
-          {children}
+        <SidePane className={styles.LayoutSidePane} />
+        <div className={styles.LayoutBody}>
+          <div className={styles.LayoutChildren}>
+            {children}
+          </div>
         </div>
       </div>
+
     </div>
   )
 }

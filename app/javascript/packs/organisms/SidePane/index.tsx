@@ -4,16 +4,6 @@ import {
   Typography
 } from "@material-ui/core";
 
-import {
-  Person as PersonIcon,
-  Home as HomeIcon,
-  People as PeopleIcon,
-  Timeline as TimelineIcon,
-  PieChart as PieChartIcon,
-  Build as BuildIcon,
-  PowerSettingsNew as PowerSettingsNewIcon
-} from '@material-ui/icons';
-
 import styles from "./styles.css";
 
 interface IOwnProps {
