@@ -27,20 +27,9 @@ const SidePane: FunctionComponent<IProps> = ({
 }) => (
   <div className={classNames(styles.SidePane, className)}>
     <div className={classNames(styles.SidePaneItems)}>
-      <PersonIcon />
       <Typography>
-        Janie
+        Art
       </Typography>
-    </div>
-    <div className={classNames(styles.SidePaneItems)}>
-      <HomeIcon />
-      <PeopleIcon />
-      <TimelineIcon />
-      <PieChartIcon />
-    </div>
-    <div className={classNames(styles.SidePaneItems)}>
-      <BuildIcon />
-      <PowerSettingsNewIcon />
     </div>
   </div>
 )
