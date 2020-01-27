@@ -1,22 +1,8 @@
 .SidePane {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 16px 24px,
+  width: 104px;
+  padding: 24px;
 }
 
 .SidePaneItems {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.SidePaneItems:hover {
-  color: #746af4
-}
-
-.SidePaneItems > svg {
-  font-size: 20;
-  margin-top: 48;
-  color: #e2e0f8;
+ 
 }

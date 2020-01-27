@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
 
 import SidePane from "../../organisms/SidePane";
+import Header from "../../organisms/Header";
 
 import styles from './styles.css';
 
@@ -9,10 +10,16 @@ const MainLayout: FunctionComponent = ({
 }) => {
   return (
     <div className={styles.LayoutMain}>
-      <SidePane />
+      <Header className={styles.LayoutHeader}/>
       <div className={styles.LayoutContainer}>
-        {children}
+        <SidePane className={styles.LayoutSidePane} />
+        <div className={styles.LayoutBody}>
+          <div className={styles.LayoutChildren}>
+            {children}
+          </div>
+        </div>
       </div>
+
     </div>
   )
 }

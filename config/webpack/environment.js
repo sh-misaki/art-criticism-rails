@@ -5,7 +5,9 @@ const merge = require('webpack-merge')
 environment.loaders.prepend('typescript', typescript)
 
 const myCssLoaderOptions = {
-  modules: true,
+  modules: {
+    localIdentName: '[local]--[hash:base64:5]',
+  },
   sourceMap: false,
 }
 
