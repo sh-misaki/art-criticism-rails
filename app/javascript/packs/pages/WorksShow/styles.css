@@ -1,0 +1,29 @@
+.LayoutWorksShow {
+  display: flex;
+  margin-top: 40px;
+}
+
+.Image {
+  width: 50%;
+}
+
+.ImageMain {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.Overview {
+  margin-left: 32px;
+}
+
+.OverviewName {
+  font-weight: bold;
+  font-size: 36px;
+  letter-spacing: 4px;
+}
+
+.OverviewList {
+  margin-top: 32px;
+  margin-left: 22px;
+  line-height: 1.8;
+}
