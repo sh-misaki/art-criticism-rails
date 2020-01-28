@@ -5,8 +5,10 @@ import Typography from "../../atoms/Typography";
 import MainLayout from "../../layouts/Main";
 import styles from "./styles.css";
 
+import { Domains } from "../../../types/domain";
+
 interface IOwnProps {
-  objects: any[];
+  objects: Domains.Work[];
 }
 
 type IProps = IOwnProps;
