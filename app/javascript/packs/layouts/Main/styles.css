@@ -19,6 +19,7 @@
   padding-left: 104px;
   height: inherit;
   overflow-y: scroll;
+  width: 100%;
 }
 
 .LayoutChildren {
