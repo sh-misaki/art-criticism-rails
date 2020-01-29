@@ -2,7 +2,7 @@
   "name": "art_criticism",
   "private": true,
   "scripts": {
-    "lint": "tslint --fix **/*.ts **/*.tsx"
+    "lint": "tslint --fix ./app/javascript/**/*.ts ./app/javascript/**/*.tsx"
   },
   "dependencies": {
     "@babel/preset-react": "^7.7.0",
