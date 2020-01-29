@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import classNames from "classnames";
 
 import Typography from "../../atoms/Typography";
@@ -13,18 +13,13 @@ type IProps = IOwnProps;
 
 class Hello extends React.Component<IProps> {
   public render() {
-    const {
-      objects,
-    } = this.props;
+    const { objects } = this.props;
 
     return (
       <MainLayout>
         <div className={styles.objectWrapper}>
           {objects.map(object => (
-            <a
-              className={styles.object}
-              href={`/works/${object.id}`}
-            >
+            <a className={styles.object} href={`/works/${object.id}`}>
               <div className={styles.objectImageWrapper}>
                 <img
                   className={styles.objectImage}
@@ -33,17 +28,17 @@ class Hello extends React.Component<IProps> {
               </div>
               <div className={styles.objectOverview}>
                 <Typography className={styles.objectOverviewTitle}>
-                  { object.name }
+                  {object.name}
                 </Typography>
                 <Typography className={styles.objectOverviewItem}>
-                  { object.artist_name } / { object.year }
+                  {object.artist_name} / {object.year}
                 </Typography>
               </div>
             </a>
           ))}
         </div>
       </MainLayout>
-    )
+    );
   }
 }
 
