@@ -3,7 +3,7 @@ import * as React from 'react';
 import MainLayout from "../../layouts/Main";
 import Typography from '../../atoms/Typography';
 
-import styles from "./styles.css";
+import styles from "./styles.scss";
 
 interface IOwnProps {
   work: any;

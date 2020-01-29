@@ -3,7 +3,7 @@ import React, { FunctionComponent } from "react";
 import SidePane from "../../organisms/SidePane";
 import Header from "../../organisms/Header";
 
-import styles from './styles.css';
+import styles from './styles.scss';
 
 const MainLayout: FunctionComponent = ({
   children,

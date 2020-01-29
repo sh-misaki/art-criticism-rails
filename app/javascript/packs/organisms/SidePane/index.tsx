@@ -4,7 +4,7 @@ import {
   Typography
 } from "@material-ui/core";
 
-import styles from "./styles.css";
+import styles from "./styles.scss";
 
 interface IOwnProps {
   className?: string;
