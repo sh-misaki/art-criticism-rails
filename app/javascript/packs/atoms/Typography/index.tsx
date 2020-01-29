@@ -15,7 +15,7 @@ const Typography: FunctionComponent<IProps> = ({
 }) => {
   return (
     <p className={classNames(styles.Typography, className)}>
-      { children }
+      {children}
     </p>
   )
 }

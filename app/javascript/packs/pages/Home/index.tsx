@@ -33,10 +33,10 @@ class Hello extends React.Component<IProps> {
               </div>
               <div className={styles.objectOverview}>
                 <Typography className={styles.objectOverviewTitle}>
-                  { object.name }
+                  {object.name}
                 </Typography>
                 <Typography className={styles.objectOverviewItem}>
-                  { object.artist_name } / { object.year }
+                  {object.artist_name} / {object.year}
                 </Typography>
               </div>
             </a>

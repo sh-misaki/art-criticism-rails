@@ -26,23 +26,23 @@ class Hello extends React.Component<IProps> {
           </div>
           <div className={styles.Overview}>
             <Typography className={styles.OverviewName}>
-              { work.name }
+              {work.name}
             </Typography>
             <ul className={styles.OverviewList}>
               <li>
-                作者: { work.artist_name }
+                作者: {work.artist_name}
               </li>
               <li>
-                カテゴリー: { work.classification }
+                カテゴリー: {work.classification}
               </li>
               <li>
-                分類: { work.department }
+                分類: {work.department}
               </li>
               <li>
-                作成年: { work.year }
+                作成年: {work.year}
               </li>
               <li>
-                ソース: { work.source }
+                ソース: {work.source}
               </li>
             </ul>
           </div>

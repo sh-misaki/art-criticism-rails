@@ -35,7 +35,7 @@ const SidePane: FunctionComponent<IProps> = ({
               href={linkItem.href}
               className={styles.HeaderLinkItem}
             >
-              { linkItem.text }
+              {linkItem.text}
             </a>
           ))
         }
