@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import Typography from "../../atoms/Typography";
 import MainLayout from "../../layouts/Main";
-import styles from "./styles.css";
+import styles from "./styles.scss";
 
 interface IOwnProps {
   objects: any[];
