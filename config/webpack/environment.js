@@ -11,7 +11,7 @@ const myCssLoaderOptions = {
   sourceMap: false,
 }
 
-const CSSLoader = environment.loaders.get('css').use.find(el => el.loader === 'css-loader')
+const CSSLoader = environment.loaders.get('sass').use.find(el => el.loader === 'css-loader')
 CSSLoader.options = merge(CSSLoader.options, myCssLoaderOptions);
 
 module.exports = environment
