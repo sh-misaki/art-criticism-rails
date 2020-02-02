@@ -1,9 +1,9 @@
-import * as React from 'react';
+import * as React from "react";
 
 import MainLayout from "../../layouts/Main";
-import Typography from '../../atoms/Typography';
+import Typography from "../../atoms/Typography";
 
-import styles from "./styles.css";
+import styles from "./styles.scss";
 
 import { Domains } from "../../../types/domain";
 
@@ -27,30 +27,18 @@ class Hello extends React.Component<IProps> {
             />
           </div>
           <div className={styles.Overview}>
-            <Typography className={styles.OverviewName}>
-              { work.name }
-            </Typography>
+            <Typography className={styles.OverviewName}>{work.name}</Typography>
             <ul className={styles.OverviewList}>
-              <li>
-                作者: { work.artist_name }
-              </li>
-              <li>
-                カテゴリー: { work.classification }
-              </li>
-              <li>
-                分類: { work.department }
-              </li>
-              <li>
-                作成年: { work.year }
-              </li>
-              <li>
-                ソース: { work.source }
-              </li>
+              <li>作者: {work.artist_name}</li>
+              <li>カテゴリー: {work.classification}</li>
+              <li>分類: {work.department}</li>
+              <li>作成年: {work.year}</li>
+              <li>ソース: {work.source}</li>
             </ul>
           </div>
         </div>
       </MainLayout>
-    )
+    );
   }
 }
 

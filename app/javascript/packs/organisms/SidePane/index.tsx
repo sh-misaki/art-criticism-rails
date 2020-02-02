@@ -1,10 +1,8 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent } from "react";
 import classNames from "classnames";
-import {
-  Typography
-} from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
-import styles from "./styles.css";
+import styles from "./styles.scss";
 
 interface IOwnProps {
   className?: string;
@@ -12,16 +10,12 @@ interface IOwnProps {
 
 type IProps = IOwnProps;
 
-const SidePane: FunctionComponent<IProps> = ({
-  className,
-}) => (
+const SidePane: FunctionComponent<IProps> = ({ className }) => (
   <div className={classNames(styles.SidePane, className)}>
     <div className={classNames(styles.SidePaneItems)}>
-      <Typography>
-        Art
-      </Typography>
+      <Typography>Art</Typography>
     </div>
   </div>
-)
+);
 
 export default SidePane;

@@ -1,14 +1,12 @@
-import {createMuiTheme} from '@material-ui/core/styles';
+import { createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
-  typography: {
-    
-  },
+  typography: {},
   palette: {
     primary: {
-      500: 'rgb(65, 139, 182)'
-    },
-  },
+      500: "rgb(65, 139, 182)"
+    }
+  }
 });
 
 export default theme;
