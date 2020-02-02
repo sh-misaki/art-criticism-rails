@@ -1,5 +1,3 @@
-
-
 export namespace Domains {
   export interface Work {
     id: number;
