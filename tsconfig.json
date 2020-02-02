@@ -16,7 +16,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "react"
+    "jsx": "react",
+    "outDir": "./.build/"
   },
   "exclude": [
     "**/*.spec.ts",
